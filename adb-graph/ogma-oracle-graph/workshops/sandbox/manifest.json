@@ -1,0 +1,51 @@
+{
+    "workshoptitle": "Build and Visualize SQL Property Graphs with Oracle Database and Linkurious Ogma",
+    "help": "livelabs-help-sg_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Workshop overview, objectives, and prerequisites",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Provision the Sandbox Environment",
+            "description": "Reserve the LiveLabs Sandbox and review the resources the Marketplace image provisions",
+            "filename": "../../provision-sandbox/provision-sandbox.md"
+        },
+        {
+            "title": "Lab 2: Connect to the Sandbox Environment",
+            "description": "Find your login information, open the remote desktop, and connect to the database",
+            "filename": "../../connect-sandbox/connect-sandbox.md"
+        },
+        {
+            "title": "Lab 3: Explore the Dataset",
+            "description": "Review the tables, keys, and relationships that become graph vertices and edges",
+            "filename": "../../dataset-overview/dataset-overview.md"
+        },
+        {
+            "title": "Lab 4: Create the SQL Property Graphs",
+            "description": "Define SQL property graphs on the relational tables and query them with GRAPH_TABLE",
+            "filename": "../../create-property-graphs/create-property-graphs.md"
+        },
+        {
+            "title": "Lab 5: Visualize the SQL Property Graphs with Linkurious Ogma",
+            "description": "Load graph query results into an Ogma web application and explore them interactively",
+            "filename": "../../visualize-with-ogma/visualize-with-ogma.md"
+        },
+        {
+            "title": "Lab 6: Lab Placeholder 1",
+            "description": "Placeholder for an additional lab",
+            "filename": "../../lab-placeholder-1/lab-placeholder-1.md"
+        },
+        {
+            "title": "Lab 7: Lab Placeholder 2",
+            "description": "Placeholder for an additional lab",
+            "filename": "../../lab-placeholder-2/lab-placeholder-2.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to common problems and directions for receiving live help",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

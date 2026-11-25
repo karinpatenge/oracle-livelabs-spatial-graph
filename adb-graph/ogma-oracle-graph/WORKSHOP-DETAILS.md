@@ -5,53 +5,48 @@ Reusable text for the LiveLabs Workshop Management System (WMS). Keep it aligned
 * **WMS ID** - 12172
 * **Branch** - `WMS_ID_12172`
 * **Workshop folder** - `adb-graph/ogma-oracle-graph`
-* **Environment** - LiveLabs Sandbox only, provisioned from an Oracle Cloud Marketplace image
-* **Help alias** - livelabs-help-sg_us@oracle.com
+* **Environment** - LiveLabs Sandbox (green button) with Oracle Autonomous AI Database 26ai and JupyterLab, built from an image that the LiveLabs team provides
+* **Sandbox instructions** - `workshops/sandbox/index.html`. Link this page in WMS so that learners see **Preview Sandbox Instructions** when they click **Start**.
+* **Help alias** - livelabs-help-db_us@oracle.com (as in the manifest)
 
 ## Title
 
-Build and Visualize SQL Property Graphs with Oracle Database and Linkurious Ogma
+From Security Events to Attack Paths: Graph-powered Cyber Threat Hunting using Oracle Property Graph and Linkurious Ogma
 
 ## Short Description
 
-Model relational tables as SQL property graphs in Oracle Database, query them with SQL/PGQ, and explore the results interactively with Linkurious Ogma in a ready-to-use LiveLabs Sandbox.
+Connect 58 days of real network security events into SQL property graphs in Oracle Autonomous AI Database, analyze them in Graph Studio, and follow an intruder's path with Linkurious Ogma.
 
 ## Long Description
 
-Relationships in your data, such as who transacts with whom or how entities connect across systems, are often buried in foreign keys and join tables. SQL property graphs in Oracle Database let you work with these relationships directly: you define vertices and edges on top of existing tables, without copying data, and query patterns and paths with the `GRAPH_TABLE` operator from the SQL:2023 standard.
+An intruder who uses a valid employee account is hard to spot. Every logon succeeds, and each step alone can look legitimate. Only the way the steps connect gives the intruder away.
 
-In this workshop, you use a LiveLabs Sandbox provisioned from an Oracle Cloud Marketplace image that already contains the database, a sample dataset, and a visualization application. You explore the dataset, create SQL property graphs, run graph queries, and visualize the results in a web application built with Linkurious Ogma, a JavaScript library for interactive graph visualization.
-
-*TODO: Add one sentence about the scenario of the final dataset and the topics of Lab 6 and Lab 7.*
+In this workshop, you investigate real network activity that Los Alamos National Laboratory (LANL) published: authentication, process, network flow, and DNS events, plus known compromise events from an authorized security exercise. You create SQL property graphs on top of the event tables, analyze them with Graph Studio notebooks, and visualize the attack paths with Linkurious Ogma in JupyterLab. Everything runs in a ready-to-use LiveLabs Sandbox.
 
 ## Workshop Outline
 
 1. Introduction
-2. Lab 1: Provision the Sandbox Environment
-3. Lab 2: Connect to the Sandbox Environment
-4. Lab 3: Explore the Dataset
-5. Lab 4: Create the SQL Property Graphs
-6. Lab 5: Visualize the SQL Property Graphs with Linkurious Ogma
-7. Lab 6: Lab Placeholder 1
-8. Lab 7: Lab Placeholder 2
+2. About the Cyber Threat
+3. Get Started
+4. Lab 1: Create the Cyber Threat Graphs
+5. Lab 2: Analyze the Cyber Threat Graphs
+6. Lab 3: Visualize the Cyber Threat Graphs
+7. Need Help?
 
 ## Workshop Prerequisites
 
 * An Oracle account to sign in to LiveLabs
-* Basic familiarity with SQL
+* Basic SQL skills
 * Optional: basic familiarity with JavaScript
 
 ## Estimated Time
 
-1 hour 45 minutes (Lab 1: 10 min, Lab 2: 10 min, Lab 3: 10 min, Lab 4: 20 min, Lab 5: 25 min, Lab 6: 15 min, Lab 7: 15 min). *TODO: Confirm after testing.*
+1 hour (About the Cyber Threat: 5 min, Get Started: 10 min, Lab 1: 10 min, Lab 2: 20 min, Lab 3: 15 min). Confirm after testing.
 
 ## Open Items Before Publication
 
-* Marketplace image: name, version, listing URL, and the components it installs (database version, service name, users, Node.js, Ogma application, ports).
-* Reservation details: provisioning time, reservation duration, and the fields shown under **View Login Info**.
-* Dataset: name, domain, origin, license, table names, and a data model diagram.
-* Final `CREATE PROPERTY GRAPH` statements and queries; consider shipping them in `create-property-graphs/files/`.
-* Ogma application: architecture, UI controls, start-up procedure, and Ogma license terms for the Sandbox.
-* Scope and titles of Lab 6 and Lab 7; rename their folders and manifest entries.
-* Screenshots for every `TODO: Add a screenshot` note, saved as lowercase, dash-separated PNG files in each lab's `images/` folder.
-* Remove all `TODO` notes.
+* Fields shown under **View Login Info** in the sandbox reservation (Database Actions URL, `GRAPHUSER` password, JupyterLab URL).
+* Content of Lab 2 (Graph Studio notebooks) and Lab 3 (Ogma notebooks in JupyterLab).
+* Screenshots for each lab, saved as lowercase, dash-separated files in each lab's `images/` folder.
+* Help alias: confirm `livelabs-help-db_us@oracle.com` or `livelabs-help-sg_us@oracle.com`.
+* Ogma license terms for the sandbox.

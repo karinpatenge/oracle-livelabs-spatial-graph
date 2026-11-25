@@ -1,51 +1,47 @@
 {
-    "workshoptitle": "Build and Visualize SQL Property Graphs with Oracle Database and Linkurious Ogma",
-    "help": "livelabs-help-sg_us@oracle.com",
-    "tutorials": [
-        {
-            "title": "Introduction",
-            "description": "Workshop overview, objectives, and prerequisites",
-            "filename": "../../introduction/introduction.md"
-        },
-        {
-            "title": "Lab 1: Provision the Sandbox Environment",
-            "description": "Reserve the LiveLabs Sandbox and review the resources the Marketplace image provisions",
-            "filename": "../../provision-sandbox/provision-sandbox.md"
-        },
-        {
-            "title": "Lab 2: Connect to the Sandbox Environment",
-            "description": "Find your login information, open the remote desktop, and connect to the database",
-            "filename": "../../connect-sandbox/connect-sandbox.md"
-        },
-        {
-            "title": "Lab 3: Explore the Dataset",
-            "description": "Review the tables, keys, and relationships that become graph vertices and edges",
-            "filename": "../../dataset-overview/dataset-overview.md"
-        },
-        {
-            "title": "Lab 4: Create the SQL Property Graphs",
-            "description": "Define SQL property graphs on the relational tables and query them with GRAPH_TABLE",
-            "filename": "../../create-property-graphs/create-property-graphs.md"
-        },
-        {
-            "title": "Lab 5: Visualize the SQL Property Graphs with Linkurious Ogma",
-            "description": "Load graph query results into an Ogma web application and explore them interactively",
-            "filename": "../../visualize-with-ogma/visualize-with-ogma.md"
-        },
-        {
-            "title": "Lab 6: Lab Placeholder 1",
-            "description": "Placeholder for an additional lab",
-            "filename": "../../lab-placeholder-1/lab-placeholder-1.md"
-        },
-        {
-            "title": "Lab 7: Lab Placeholder 2",
-            "description": "Placeholder for an additional lab",
-            "filename": "../../lab-placeholder-2/lab-placeholder-2.md"
-        },
-        {
-            "title": "Need Help?",
-            "description": "Solutions to common problems and directions for receiving live help",
-            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
-        }
-    ]
+  "workshoptitle": "From Security Events to Attack Paths: Graph-powered Cyber Threat Hunting using Oracle Property Graph and Linkurious Ogma",
+  "help": "livelabs-help-db_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Workshop overview, objectives, and what the sandbox sets up for you.",
+      "type": "livelabs",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "About the Cyber Threat",
+      "description": "The threat you investigate, the LANL data that records it, and what regular network activity looks like.",
+      "type": "livelabs",
+      "filename": "../../about-cyber-threat/about-cyber-threat.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "Connect to the Autonomous AI Database and explore the cyber-security dataset.",
+      "type": "livelabs",
+      "filename": "../../get-started/get-started.md"
+    },
+    {
+      "title": "Lab 1: Create the Cyber Threat Graphs",
+      "description": "Open a SQL worksheet and create the cyber threat property graphs.",
+      "type": "livelabs",
+      "filename": "../../create-property-graphs/create-property-graphs.md"
+    },
+    {
+      "title": "Lab 2: Analyze the Cyber Threat Graphs",
+      "description": "Import and run the Graph Studio notebooks that analyze the cyber threat graphs.",
+      "type": "livelabs",
+      "filename": "../../analyze-graphs/analyze-graphs.md"
+    },
+    {
+      "title": "Lab 3: Visualize the Cyber Threat Graphs",
+      "description": "Open JupyterLab and visualize the cyber threat graphs with Ogma.",
+      "type": "livelabs",
+      "filename": "../../visualize-with-ogma/visualize-with-ogma.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Template to link to Need Help lab at the end of workshop.",
+      "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/need-help/need-help-freetier.md"
+    }
+  ]
 }

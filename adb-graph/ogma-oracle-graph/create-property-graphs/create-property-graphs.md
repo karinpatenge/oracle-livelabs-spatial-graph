@@ -1,119 +1,215 @@
-# Create the SQL Property Graphs
+# Create the Cyber Threat Graphs
 
 ## Introduction
 
-In this lab, you create SQL property graphs on top of the dataset tables and run your first graph queries. A SQL property graph only stores metadata that maps tables to vertices and edges, so creating one is fast and the graph always reflects the current table data.
+In this lab, you create two SQL property graphs on top of the LANL tables. Your sandbox already contains the five event tables and the three entity tables that the graphs use.
 
-Estimated Time: 20 minutes
+- The **ground-truth graph** holds only the known compromise events from the authorized security exercise. It tells you what the intruders actually did.
+- The **cyber graph** connects the authentication, DNS, network flow, and process events. It shows all activity on the network, regular and malicious.
+
+A property graph does not copy any data. It defines how table rows form vertices and edges. You can then query the tables as a graph.
+
+Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-* Create a SQL property graph with `CREATE PROPERTY GRAPH`
-* Create a second SQL property graph for a different view of the data
-* Verify the graphs in the data dictionary
-* Query the graphs with `GRAPH_TABLE`
+- Open a SQL worksheet as `GRAPHUSER`.
+- Create the ground-truth graph `LANL_GROUND_TRUTH_GRAPH`.
+- Create the cyber graph `LANL_CYBER_GRAPH`.
+- Check that both graphs exist and return data.
 
-### Prerequisites
+> **Note:** Run the blocks one at a time. Paste a block into an empty worksheet and click **Run Script**. Check the result before you run the next block.
 
-This lab assumes you have:
+## Task 1: Open a SQL Worksheet
 
-* A SQLcl session connected to the workshop user
-* Familiarity with the dataset tables from Lab 3
+1. On your reservation page, click **View Login Info**. Copy the **SQL Worksheet URL**, the database user `GRAPHUSER`, and its password.
 
-## Task 1: Create the First Property Graph
+2. Open the SQL Worksheet URL in a new browser tab and sign in as `GRAPHUSER`.
 
-1. Create a property graph that maps the entity tables to vertices and the relationship table to edges.
+3. Run this query with **Run Script**. It lists the tables that the graphs use.
 
+    ```sql
+    <copy>
+    -- -------------LAB 1 TASK 1 STEP 3-------------
+    SELECT table_name, num_rows
+    FROM user_tables
+    WHERE table_name IN ('AUTH', 'DNS', 'FLOWS', 'PROC', 'REDTEAM',
+                         'COMPUTER', 'USER_DOMAIN', 'PROCESS')
+    ORDER BY table_name;
+    </copy>
     ```
-    <copy>CREATE PROPERTY GRAPH <graph_name_1>
+
+    The query returns eight rows. `NUM_ROWS` shows the row count from the last statistics run.
+
+## Task 2: Create Cyber Threat Property Graphs
+
+Both graphs share the same three vertex tables:
+
+| Vertex label | Table | Represents |
+| --- | --- | --- |
+| `user_domain` | `USER_DOMAIN` | An account, written as user@domain |
+| `computer` | `COMPUTER` | A desktop, server, or other host |
+| `process` | `PROCESS` | A program that runs on a computer |
+
+The edges come from the event tables. One event table can feed more than one edge table. For example, one `AUTH` row produces three edges. The first links the source account to the source computer. The second links the destination account to the destination computer. The third links the two computers.
+
+1. Prepare the session and remove any graphs from an earlier run. Paste the block and click **Run Script**.
+
+    ```sql
+    <copy>
+    -- -------------LAB 1 TASK 2 STEP 1-------------
+    ALTER SESSION FORCE PARALLEL QUERY;
+    ALTER SESSION ENABLE PARALLEL DDL;
+    ALTER SESSION ENABLE PARALLEL DML;
+
+    DROP PROPERTY GRAPH IF EXISTS lanl_ground_truth_graph;
+    DROP PROPERTY GRAPH IF EXISTS lanl_cyber_graph;
+    </copy>
+    ```
+
+2. Create the ground-truth graph from the `REDTEAM` table. Paste the block and click **Run Script**.
+
+    ```sql
+    <copy>
+    -- -------------LAB 1 TASK 2 STEP 2-------------
+    CREATE PROPERTY GRAPH IF NOT EXISTS lanl_ground_truth_graph
       VERTEX TABLES (
-        <vertex_table_1>
-          KEY (<id_column>)
-          LABEL <vertex_label_1>
-          PROPERTIES (<column_1>, <column_2>)
+        user_domain
+          KEY ( user_domain )
+          LABEL user_domain PROPERTIES ARE ALL COLUMNS,
+        computer
+          KEY ( computer )
+          LABEL computer PROPERTIES ARE ALL COLUMNS,
+        process AS process
+          KEY ( process )
+          LABEL process PROPERTIES ARE ALL COLUMNS
       )
       EDGE TABLES (
-        <edge_table_1>
-          KEY (<edge_id_column>)
-          SOURCE KEY (<source_column>) REFERENCES <vertex_table_1> (<id_column>)
-          DESTINATION KEY (<destination_column>) REFERENCES <vertex_table_1> (<id_column>)
-          LABEL <edge_label_1>
-          PROPERTIES (<column_3>)
-      );</copy>
+        redteam AS redteam_user_authenticated_computer
+          KEY ( id )
+          SOURCE KEY ( user_domain ) REFERENCES user_domain ( user_domain )
+          DESTINATION KEY ( src_computer ) REFERENCES computer ( computer )
+          LABEL authenticated PROPERTIES ( id, time, user_domain, src_computer ),
+        redteam AS redteam_computer_compromised_computer
+          KEY ( id )
+          SOURCE KEY ( src_computer ) REFERENCES computer ( computer )
+          DESTINATION KEY ( dst_computer ) REFERENCES computer ( computer )
+          LABEL compromised PROPERTIES ( id, time, user_domain, src_computer, dst_computer )
+      );
+    </copy>
     ```
 
-    *TODO: Replace the placeholders with the final DDL. Optionally provide the script as `files/create-graphs.sql`.*
+    Each `REDTEAM` row becomes two edges. An `authenticated` edge links the compromised account to the computer it started from. A `compromised` edge links that computer to the computer the intruder reached.
 
-## Task 2: Create the Second Property Graph
+3. Create the cyber graph from the `AUTH`, `DNS`, `FLOWS`, and `PROC` tables. Paste the block and click **Run Script**.
 
-1. Create a second property graph that covers a different subset or perspective of the data.
-
-    ```
-    <copy>CREATE PROPERTY GRAPH <graph_name_2>
+    ```sql
+    <copy>
+    -- -------------LAB 1 TASK 2 STEP 3-------------
+    CREATE PROPERTY GRAPH IF NOT EXISTS lanl_cyber_graph
       VERTEX TABLES (
-        <vertex_table_1> KEY (<id_column>) LABEL <vertex_label_1>,
-        <vertex_table_2> KEY (<id_column>) LABEL <vertex_label_2>
+        user_domain
+          KEY ( user_domain )
+          LABEL user_domain PROPERTIES ARE ALL COLUMNS,
+        computer
+          KEY ( computer )
+          LABEL computer PROPERTIES ARE ALL COLUMNS,
+        process AS process
+          KEY ( process )
+          LABEL process PROPERTIES ARE ALL COLUMNS
       )
       EDGE TABLES (
-        <edge_table_2>
-          KEY (<edge_id_column>)
-          SOURCE KEY (<source_column>) REFERENCES <vertex_table_1> (<id_column>)
-          DESTINATION KEY (<destination_column>) REFERENCES <vertex_table_2> (<id_column>)
-          LABEL <edge_label_2>
-      );</copy>
+        dns AS dns_computer_resolved_computer
+          KEY ( id )
+          SOURCE KEY ( src_computer ) REFERENCES computer ( computer )
+          DESTINATION KEY ( computer_resolved ) REFERENCES computer ( computer )
+          LABEL resolved PROPERTIES ( id, time, src_computer, computer_resolved ),
+        flows AS flows_computer_connected_computer
+          KEY ( id )
+          SOURCE KEY ( src_computer ) REFERENCES computer ( computer )
+          DESTINATION KEY ( dst_computer ) REFERENCES computer ( computer )
+          LABEL flows_connected PROPERTIES ( id, time, duration, src_computer, src_port, dst_port, dst_computer, protocol, packet_cnt, byte_cnt ),
+        proc AS proc_user_authenticated_computer
+          KEY ( id )
+          SOURCE KEY ( user_domain ) REFERENCES user_domain ( user_domain )
+          DESTINATION KEY ( computer ) REFERENCES computer ( computer )
+          LABEL proc_connected PROPERTIES ( id, time, user_domain, computer ),
+        proc AS proc_computer_runs_process
+          KEY ( id )
+          SOURCE KEY ( computer ) REFERENCES computer ( computer )
+          DESTINATION KEY ( process_name ) REFERENCES process ( process )
+          LABEL ran PROPERTIES ( id, time, computer, process_name, start_end ),
+        auth AS auth_src_user_authenticated_src_computer
+          KEY ( id )
+          SOURCE KEY ( src_user_domain ) REFERENCES user_domain ( user_domain )
+          DESTINATION KEY ( src_computer ) REFERENCES computer ( computer )
+          LABEL auth_src_authenticated PROPERTIES (id, time, src_user_domain, src_computer, auth_type, logon_type, auth_orientation, success_failure, redteam ),
+        auth AS auth_dst_user_authenticated_dst_computer
+          KEY ( id )
+          SOURCE KEY ( dst_user_domain ) REFERENCES user_domain ( user_domain )
+          DESTINATION KEY ( dst_computer ) REFERENCES computer ( computer )
+          LABEL auth_dst_authenticated PROPERTIES (id, time, dst_user_domain, dst_computer, auth_type, logon_type, auth_orientation, success_failure, redteam ),
+        auth AS auth_src_computer_connected_dst_computer
+          KEY ( id )
+          SOURCE KEY ( src_computer ) REFERENCES computer ( computer )
+          DESTINATION KEY ( dst_computer ) REFERENCES computer ( computer )
+          LABEL auth_connected PROPERTIES (id, time, src_computer, dst_computer, redteam )
+      );
+    </copy>
     ```
 
-    *TODO: Define the second graph and explain why it is modeled separately.*
+    The cyber graph has seven edge labels:
 
-## Task 3: Verify the Graphs
+    | Edge label | Source table | From | To |
+    | --- | --- | --- | --- |
+    | `resolved` | `DNS` | Computer that asks | Computer it resolves |
+    | `flows_connected` | `FLOWS` | Source computer | Destination computer |
+    | `proc_connected` | `PROC` | Account | Computer that runs the process |
+    | `ran` | `PROC` | Computer | Process that starts or stops |
+    | `auth_src_authenticated` | `AUTH` | Source account | Source computer |
+    | `auth_dst_authenticated` | `AUTH` | Destination account | Destination computer |
+    | `auth_connected` | `AUTH` | Source computer | Destination computer |
 
-1. List the property graphs in your schema.
+    The `AUTH` edges keep the `redteam` property. It marks the authentication events that belong to the security exercise.
 
-    ```
-    <copy>SELECT graph_name FROM user_property_graphs;</copy>
-    ```
+4. Check that both graphs exist. Paste the query and click **Run Script**.
 
-    Both graphs appear in the result.
-
-## Task 4: Query the Graphs
-
-1. Find vertices connected by an edge. `GRAPH_TABLE` returns the matched pattern as rows, so you can combine it with any SQL.
-
-    ```
-    <copy>SELECT *
-    FROM GRAPH_TABLE ( <graph_name_1>
-           MATCH (a IS <vertex_label_1>) -[e IS <edge_label_1>]-> (b IS <vertex_label_1>)
-           COLUMNS (a.<id_column> AS source_id,
-                    b.<id_column> AS target_id)
-         )
-    FETCH FIRST 10 ROWS ONLY;</copy>
-    ```
-
-2. Follow paths of variable length, for example one to three hops from a given vertex.
-
-    ```
-    <copy>SELECT *
-    FROM GRAPH_TABLE ( <graph_name_1>
-           MATCH (a IS <vertex_label_1>) -[e IS <edge_label_1>]->{1,3} (b IS <vertex_label_1>)
-           WHERE a.<id_column> = <start_id>
-           COLUMNS (a.<id_column> AS source_id,
-                    b.<id_column> AS target_id)
-         );</copy>
+    ```sql
+    <copy>
+    -- -------------LAB 1 TASK 2 STEP 4-------------
+    SELECT graph_name
+    FROM user_property_graphs
+    ORDER BY graph_name;
+    </copy>
     ```
 
-    *TODO: Add the queries that the Ogma application uses in Lab 5, with expected results.*
+    The query returns `LANL_CYBER_GRAPH` and `LANL_GROUND_TRUTH_GRAPH`.
 
-You may now **proceed to the next lab**.
+5. Query the ground-truth graph. This query counts the `compromised` edges, one for each compromise event.
+
+    ```sql
+    <copy>
+    -- -------------LAB 1 TASK 2 STEP 5-------------
+    SELECT COUNT(*) AS compromise_events
+    FROM GRAPH_TABLE ( lanl_ground_truth_graph
+      MATCH (s IS computer) -[e IS compromised]-> (d IS computer)
+      COLUMNS ( e.id AS id )
+    );
+    </copy>
+    ```
+
+    The count matches the number of rows in the `REDTEAM` table.
+
+You can also download the complete script: [create-graphs.sql](files/create-graphs.sql).
 
 ## Learn More
 
-* [SQL Property Graphs in the Oracle Database Graph Developer's Guide](https://docs.oracle.com/en/database/oracle/property-graph/)
-* [CREATE PROPERTY GRAPH in the SQL Language Reference](https://docs.oracle.com/en/database/oracle/oracle-database/)
+- [LANL Comprehensive, Multi-Source Cyber-Security Events dataset](https://csr.lanl.gov/data/cyber1/)
 
 ## Acknowledgements
 
-* **Author** - Karin Patenge, Oracle Database Product Management, Spatial and Graph
-* **Contributors** - *TODO*
-* **Last Updated By/Date** - Karin Patenge, October 2026
+* **Author** - Karin Patenge, Database Product Management
+* **Contributors** - Hans Viehmann, Léo Nicolle (Linkurious), Ramu Murakami Gutierrez
+* **Last Updated By/Date** - Karin Patenge, December 2026

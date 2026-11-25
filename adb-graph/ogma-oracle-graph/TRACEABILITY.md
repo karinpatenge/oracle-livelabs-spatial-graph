@@ -6,24 +6,28 @@ Internal record of the sources used to build this workshop. Not part of the lear
 
 | Source | Classification | Used for | Learner-facing attribution |
 | --- | --- | --- | --- |
-| [oracle-livelabs/developer: sample-workshop](https://github.com/oracle-livelabs/developer/tree/main/sample-workshop) | Oracle-owned | Folder layout, `index.html` loader page, manifest structure, lab section contract | Not required |
-| [oracle-livelabs/developer: livelabs-ultimate-template](https://github.com/oracle-livelabs/developer/tree/main/livelabs-ultimate-template) | Oracle-owned | Markdown conventions, sandbox manifest pattern | Not required |
-| [oracle-livelabs/common: need-help-livelabs.md](https://github.com/oracle-livelabs/common/tree/main/labs/need-help) | Oracle-owned | Shared "Need Help?" lab referenced from the manifest | Not required |
-| `graph/graph-server-client` workshop in this repository | Oracle-owned | Help alias and acknowledgement style | Not required |
-| LiveLabs workshop author skill templates | Oracle-owned | Workshop details and traceability stubs | Not required |
+| `adb-graph/f1-ontology-vector-rag` workshop in this repository | Oracle-owned | Blueprint for folder layout, `index.html` loader, manifest, and lab style | Not required |
+| LiveLabs workshop author and validator skills | Oracle-owned | Lab section contract, markdown rules, validation | Not required |
+| DOAG 2026 presentation "From Security Events to Attack Paths: Graph-powered Cyber Threat Hunting" (Hans Viehmann, Oracle; Léo Nicolle, Linkurious), slides 3 to 5 | Oracle copyright, co-presented with Linkurious | Use case text in About the Cyber Threat, haystack image | Not required for Oracle-owned parts; confirm with Linkurious for any Linkurious-authored parts |
+| `ogma-oracle-livelabs` repository, `scripts/` (Karin Patenge) | Oracle-owned | `CREATE PROPERTY GRAPH` statements in Lab 1, table definitions, data subset rules | Not required |
+| LANL dataset diagrams in `LiveLabs workshop/media/Claude` (created with Claude) | Oracle-owned, AI-assisted | Four diagrams in Get Started, with headers and footers moved into markdown | Not required |
+| [LANL Comprehensive, Multi-Source Cyber-Security Events](https://csr.lanl.gov/data/cyber1/) | External, public domain (LANL waived all copyright) | Dataset, dataset description, and statistics | Cite A. D. Kent, LANL 2015, doi:10.17021/1179829 |
+| Microsoft, MITRE ATT&CK, and MITRE CAR documentation on NTLM and pass-the-hash | External, public web pages | Why NTLM Matters in Get Started, paraphrased | Linked in Learn More |
 
 ## Third-Party Material
 
-No Linkurious-authored content (code, screenshots, diagrams, or text) has been used so far. Linkurious Ogma is only named and linked to its public documentation.
-
-Before adapting any external material, for example Linkurious sample code, screenshots of the Ogma UI, or a third-party dataset, record here:
-
-* the source owner and URL,
-* the explicit approval from the source owner for this workshop,
-* the license of the material, including the Ogma license used in the Sandbox image.
-
-Learner-facing acknowledgements for approved external sources must include: `Built with permission from the author(s).`
+* **LANL dataset** - LANL waived all copyright and related rights. LANL asks users to cite the dataset.
+* **Linkurious** - Léo Nicolle (Linkurious) is listed as contributor. Before adapting Linkurious code, screenshots of the Ogma UI, or Linkurious-authored slides, record the approval here and add `Built with permission from the author(s).` to the learner-facing acknowledgements.
 
 ## Embedded Assets
 
-No images, diagrams, or datasets are included yet.
+| Asset | Lab | Origin |
+| --- | --- | --- |
+| `about-cyber-threat/images/network-haystack.png` | About the Cyber Threat | DOAG 2026 presentation, slide 3 |
+| `get-started/images/lanl-log-sources.svg` | Get Started | Diagram 1 of `media/Claude`, header and footer removed |
+| `get-started/images/lanl-five-files.svg` | Get Started | Diagram 2 of `media/Claude`, header and footer removed |
+| `get-started/images/lanl-regular-data-flow.svg` | Get Started | Diagram 3 of `media/Claude`, header removed |
+| `get-started/images/lanl-red-team-data-flows.svg` | Get Started | Diagram 4 of `media/Claude`, header and footer removed |
+| `create-property-graphs/files/create-graphs.sql` | Lab 1 | Unchanged copy of `ogma-oracle-livelabs/scripts/11-create_graphs.sql` |
+
+The four SVG diagrams carry a C2PA content credential from Anthropic. Removing the headers and footers changed the files after signing.

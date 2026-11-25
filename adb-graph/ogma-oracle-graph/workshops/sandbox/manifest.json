@@ -15,10 +15,10 @@
       "filename": "../../about-cyber-threat/about-cyber-threat.md"
     },
     {
-      "title": "Get Started",
+      "title": "Exploring the Dataset",
       "description": "Connect to the Autonomous AI Database and explore the cyber-security dataset.",
       "type": "livelabs",
-      "filename": "../../get-started/get-started.md"
+      "filename": "../../explore-dataset/explore-dataset.md"
     },
     {
       "title": "Lab 1: Create the Cyber Threat Graphs",

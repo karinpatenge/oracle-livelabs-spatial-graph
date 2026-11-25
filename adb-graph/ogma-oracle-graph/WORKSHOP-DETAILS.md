@@ -27,7 +27,7 @@ In this workshop, you investigate real network activity that Los Alamos National
 
 1. Introduction
 2. About the Cyber Threat
-3. Get Started
+3. Exploring the Dataset
 4. Lab 1: Create the Cyber Threat Graphs
 5. Lab 2: Analyze the Cyber Threat Graphs
 6. Lab 3: Visualize the Cyber Threat Graphs
@@ -41,7 +41,7 @@ In this workshop, you investigate real network activity that Los Alamos National
 
 ## Estimated Time
 
-1 hour (About the Cyber Threat: 5 min, Get Started: 10 min, Lab 1: 10 min, Lab 2: 20 min, Lab 3: 15 min). Confirm after testing.
+1 hour (About the Cyber Threat: 5 min, Exploring the Dataset: 10 min, Lab 1: 10 min, Lab 2: 20 min, Lab 3: 15 min). Confirm after testing.
 
 ## Open Items Before Publication
 

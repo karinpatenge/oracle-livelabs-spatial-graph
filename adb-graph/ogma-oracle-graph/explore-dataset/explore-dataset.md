@@ -1,4 +1,4 @@
-# Get Started
+# Exploring the Dataset
 
 ## Introduction
 
@@ -146,7 +146,7 @@ The `ID` column numbers the lines of the original file. An empty value (`NULL`) 
 
     ```sql
     <copy>
-    -- -------------GET STARTED TASK 2 STEP 2-------------
+    -- -------------EXPLORING THE DATASET TASK 2 STEP 2-------------
     SELECT table_name, num_rows
     FROM user_tables
     WHERE table_name IN ('AUTH', 'DNS', 'FLOWS', 'PROC', 'REDTEAM',
@@ -161,7 +161,7 @@ The `ID` column numbers the lines of the original file. An empty value (`NULL`) 
 
     ```sql
     <copy>
-    -- -------------GET STARTED TASK 2 STEP 3-------------
+    -- -------------EXPLORING THE DATASET TASK 2 STEP 3-------------
     SELECT src_computer,
            COUNT(*)                     AS events,
            COUNT(DISTINCT user_domain)  AS accounts,
@@ -178,7 +178,7 @@ The `ID` column numbers the lines of the original file. An empty value (`NULL`) 
 
     ```sql
     <copy>
-    -- -------------GET STARTED TASK 2 STEP 4-------------
+    -- -------------EXPLORING THE DATASET TASK 2 STEP 4-------------
     SELECT r.time, r.user_domain, r.src_computer, r.dst_computer,
            a.auth_type, a.logon_type, a.auth_orientation,
            a.success_failure, a.redteam

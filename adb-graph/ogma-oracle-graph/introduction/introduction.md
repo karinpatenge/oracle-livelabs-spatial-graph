@@ -8,6 +8,12 @@ You work in a LiveLabs Sandbox. LiveLabs prepares it with the database, the data
 
 Estimated Workshop Time: 1 hour
 
+### Watch the Video
+
+The video shows where the workshop leads: an Ogma visualization of the stolen credentials in the LANL data. Ogma groups the victim computers by the attacker identity that reached them. It switches between a force and a hierarchical layout and replays the logons on a timeline. The video has no sound.
+
+[Ogma visualization of the stolen credentials in the LANL data](video:../../introduction/images/ogma-demo-stolen-credentials.mp4:medium)
+
 ### Objectives
 
 In this workshop, you will:

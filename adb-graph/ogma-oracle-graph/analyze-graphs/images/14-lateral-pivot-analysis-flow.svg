@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1461" viewBox="0 0 1500 1461" role="img" aria-label="Scenario 2: Lateral Pivot - Analysis Flow" xmlns:c2pa="http://c2pa.org/manifest">
+<title>Scenario 2: Lateral Pivot - Analysis Flow</title>
+<rect x="40" y="30" width="1420" height="102" rx="6" fill="#332D29" stroke="#6F6862" stroke-width="1.5"/>
+<text x="70" y="82" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">Scenario 2: Lateral Pivot - Analysis Flow</text>
+<text x="70" y="114" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="16" fill="#D9D3CC">Graph Studio notebook 14-cyber_threat_scenario_lateral_pivot.dsnb</text>
+<rect x="40" y="150" width="1420" height="82" rx="6" fill="#FFFFFF" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="64" y="184" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" fill="#171513">Core graph pattern: an authentication from a source computer to a destination computer</text>
+<text x="64" y="212" xml:space="preserve" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="15" fill="#1F5661">(src IS computer) -[e IS auth_connected]-&gt; (dst IS computer)</text>
+<line x1="72" y1="292" x2="72" y2="1272" stroke="#AAA199" stroke-width="3"/>
+<line x1="92" y1="292" x2="118" y2="292" stroke="#AAA199" stroke-width="2"/>
+<circle cx="72" cy="292" r="11" fill="#FFFFFF" stroke="#332D29" stroke-width="3"/>
+<line x1="92" y1="429" x2="118" y2="429" stroke="#AAA199" stroke-width="2"/>
+<circle cx="72" cy="429" r="20" fill="#332D29" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="72" y="435.5" text-anchor="middle" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">1</text>
+<line x1="92" y1="566" x2="118" y2="566" stroke="#AAA199" stroke-width="2"/>
+<circle cx="72" cy="566" r="20" fill="#332D29" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="72" y="572.5" text-anchor="middle" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">2</text>
+<line x1="92" y1="703" x2="118" y2="703" stroke="#AAA199" stroke-width="2"/>
+<circle cx="72" cy="703" r="20" fill="#332D29" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="72" y="709.5" text-anchor="middle" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">3</text>
+<line x1="92" y1="840" x2="118" y2="840" stroke="#AAA199" stroke-width="2"/>
+<circle cx="72" cy="840" r="20" fill="#332D29" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="72" y="846.5" text-anchor="middle" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">4</text>
+<line x1="92" y1="977" x2="118" y2="977" stroke="#AAA199" stroke-width="2"/>
+<circle cx="72" cy="977" r="20" fill="#332D29" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="72" y="983.5" text-anchor="middle" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">5</text>
+<line x1="92" y1="1114" x2="118" y2="1114" stroke="#AAA199" stroke-width="2"/>
+<circle cx="72" cy="1114" r="20" fill="#332D29" stroke="#FFFFFF" stroke-width="2.5"/>
+<text x="72" y="1120.5" text-anchor="middle" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">6</text>
+<line x1="92" y1="1272" x2="118" y2="1272" stroke="#AAA199" stroke-width="2"/>
+<circle cx="72" cy="1272" r="11" fill="#FFFFFF" stroke="#332D29" stroke-width="3"/>
+<path d="M65,358.5 L72,366.5 L79,358.5" fill="none" stroke="#AAA199" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M65,495.5 L72,503.5 L79,495.5" fill="none" stroke="#AAA199" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M65,632.5 L72,640.5 L79,632.5" fill="none" stroke="#AAA199" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M65,769.5 L72,777.5 L79,769.5" fill="none" stroke="#AAA199" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M65,906.5 L72,914.5 L79,906.5" fill="none" stroke="#AAA199" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M65,1043.5 L72,1051.5 L79,1043.5" fill="none" stroke="#AAA199" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M65,1191.0 L72,1199.0 L79,1191.0" fill="none" stroke="#AAA199" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="118.0" y="258" width="1342.0" height="115" rx="6" fill="#6F6862"/>
+<rect x="123.0" y="258" width="1337.0" height="115" rx="6" fill="#FFFFFF"/>
+<rect x="123.0" y="258" width="10" height="115" fill="#FFFFFF"/>
+<rect x="118.0" y="258" width="1342.0" height="115" rx="6" fill="none" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="140.0" y="291" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" fill="#171513">Session Settings</text>
+<text x="140.0" y="319" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">Switch the session to the HIGH service for more parallel power, then check the setting.</text>
+<rect x="140.0" y="331" width="266.5" height="21" rx="4" fill="#EEEAE5"/>
+<text x="149.0" y="346" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#2F2A27">CS_SESSION.SWITCH_SERVICE('HIGH')</text>
+<rect x="118.0" y="395" width="1342.0" height="115" rx="6" fill="#C94735"/>
+<rect x="123.0" y="395" width="1337.0" height="115" rx="6" fill="#FFFFFF"/>
+<rect x="123.0" y="395" width="10" height="115" fill="#FFFFFF"/>
+<rect x="118.0" y="395" width="1342.0" height="115" rx="6" fill="none" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="140.0" y="428" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" fill="#171513">Beachhead Shape Verification</text>
+<text x="140.0" y="456" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">Distinct victims and time span per confirmed staging host, then the victims per hour for C17693, C19932, and C22409.</text>
+<rect x="140.0" y="468" width="191.2" height="21" rx="4" fill="#F8E2DD"/>
+<text x="149.0" y="483" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#7A2418">lanl_ground_truth_graph</text>
+<rect x="339.2" y="468" width="100.8" height="21" rx="4" fill="#F8E2DD"/>
+<text x="348.2" y="483" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#7A2418">compromised</text>
+<rect x="118.0" y="532" width="1342.0" height="115" rx="6" fill="#2F6871"/>
+<rect x="123.0" y="532" width="1337.0" height="115" rx="6" fill="#FFFFFF"/>
+<rect x="123.0" y="532" width="10" height="115" fill="#FFFFFF"/>
+<rect x="118.0" y="532" width="1342.0" height="115" rx="6" fill="none" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="140.0" y="565" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" fill="#171513">Burst Generalization</text>
+<text x="140.0" y="593" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">Computers that connect to 5 or more computers within one hour. Hours with a confirmed event first, then the always-busy hosts last.</text>
+<rect x="140.0" y="605" width="138.5" height="21" rx="4" fill="#DCEFF4"/>
+<text x="149.0" y="620" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#1F5661">lanl_cyber_graph</text>
+<rect x="286.5" y="605" width="123.4" height="21" rx="4" fill="#DCEFF4"/>
+<text x="295.5" y="620" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#1F5661">auth_connected</text>
+<rect x="118.0" y="669" width="664.0" height="115" rx="6" fill="#2F6871"/>
+<rect x="123.0" y="669" width="659.0" height="115" rx="6" fill="#FFFFFF"/>
+<rect x="123.0" y="669" width="10" height="115" fill="#FFFFFF"/>
+<rect x="118.0" y="669" width="664.0" height="115" rx="6" fill="none" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="140.0" y="702" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#1F5661">3<tspan dx="9" font-weight="600" fill="#171513">New Candidate Isolation</tspan></text>
+<text x="140.0" y="730" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">Drop the known staging hosts and the hours with a confirmed red team event.</text>
+<rect x="140.0" y="742" width="123.4" height="21" rx="4" fill="#DCEFF4"/>
+<text x="149.0" y="757" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#1F5661">auth_connected</text>
+<rect x="271.4" y="742" width="100.8" height="21" rx="4" fill="#F8E2DD"/>
+<text x="280.4" y="757" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#7A2418">compromised</text>
+<rect x="796.0" y="669" width="664.0" height="115" rx="6" fill="#2F6871"/>
+<rect x="801.0" y="669" width="659.0" height="115" rx="6" fill="#FFFFFF"/>
+<rect x="801.0" y="669" width="10" height="115" fill="#FFFFFF"/>
+<rect x="796.0" y="669" width="664.0" height="115" rx="6" fill="none" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="818.0" y="702" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#1F5661">3a<tspan dx="9" font-weight="600" fill="#171513">Rank the Staging Hosts' Bursts</tspan></text>
+<text x="818.0" y="730" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">Rank the hourly bursts of the staging hosts by burst size and by overall fan-out.</text>
+<rect x="818.0" y="742" width="123.4" height="21" rx="4" fill="#DCEFF4"/>
+<text x="827.0" y="757" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#1F5661">auth_connected</text>
+<rect x="118.0" y="806" width="1342.0" height="115" rx="6" fill="#2F6871"/>
+<rect x="123.0" y="806" width="1337.0" height="115" rx="6" fill="#FFFFFF"/>
+<rect x="123.0" y="806" width="10" height="115" fill="#FFFFFF"/>
+<rect x="118.0" y="806" width="1342.0" height="115" rx="6" fill="none" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="140.0" y="839" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" fill="#171513">Identity Behind the Beachhead</text>
+<text x="140.0" y="867" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">Accounts whose credentials were used from C17693 in the half hour before and during its busiest hour.</text>
+<rect x="140.0" y="879" width="183.7" height="21" rx="4" fill="#DCEFF4"/>
+<text x="149.0" y="894" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#1F5661">auth_src_authenticated</text>
+<rect x="118.0" y="943" width="1342.0" height="115" rx="6" fill="#2F6871"/>
+<rect x="123.0" y="943" width="1337.0" height="115" rx="6" fill="#FFFFFF"/>
+<rect x="123.0" y="943" width="10" height="115" fill="#FFFFFF"/>
+<rect x="118.0" y="943" width="1342.0" height="115" rx="6" fill="none" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="140.0" y="976" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" fill="#171513">Multi-Hop Reach</text>
+<text x="140.0" y="1004" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">Computers reached from C17693 within one and two hops.</text>
+<rect x="140.0" y="1016" width="123.4" height="21" rx="4" fill="#DCEFF4"/>
+<text x="149.0" y="1031" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#1F5661">auth_connected</text>
+<rect x="271.4" y="1016" width="70.7" height="21" rx="4" fill="#DCEFF4"/>
+<text x="280.4" y="1031" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#1F5661">-&gt;{1,2}</text>
+<rect x="118.0" y="1080" width="664.0" height="136" rx="6" fill="#5F8B4C"/>
+<rect x="123.0" y="1080" width="659.0" height="136" rx="6" fill="#FFFFFF"/>
+<rect x="123.0" y="1080" width="10" height="136" fill="#FFFFFF"/>
+<rect x="118.0" y="1080" width="664.0" height="136" rx="6" fill="none" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="140.0" y="1113" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#315421">6a<tspan dx="9" font-weight="600" fill="#171513">Compute PageRank</tspan></text>
+<text x="140.0" y="1141" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">Compute PageRank for every computer once and store the scores. Skipped if the table</text>
+<text x="140.0" y="1162" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">already exists.</text>
+<rect x="140.0" y="1174" width="146.0" height="21" rx="4" fill="#DFEBD8"/>
+<text x="149.0" y="1189" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#315421">DBMS_OGA.PAGERANK</text>
+<rect x="294.0" y="1174" width="138.5" height="21" rx="4" fill="#DCEFF4"/>
+<text x="303.0" y="1189" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#1F5661">lanl_cyber_graph</text>
+<rect x="440.5" y="1174" width="146.0" height="21" rx="4" fill="#F4DFC1"/>
+<text x="449.5" y="1189" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#7A4403">computer_pagerank</text>
+<rect x="796.0" y="1080" width="664.0" height="136" rx="6" fill="#2F6871"/>
+<rect x="801.0" y="1080" width="659.0" height="136" rx="6" fill="#FFFFFF"/>
+<rect x="801.0" y="1080" width="10" height="136" fill="#FFFFFF"/>
+<rect x="796.0" y="1080" width="664.0" height="136" rx="6" fill="none" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="818.0" y="1113" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#1F5661">6b<tspan dx="9" font-weight="600" fill="#171513">Rank Reached Computers</tspan></text>
+<text x="818.0" y="1141" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">PageRank of the beachhead and every computer it reaches within two hops.</text>
+<rect x="818.0" y="1153" width="123.4" height="21" rx="4" fill="#DCEFF4"/>
+<text x="827.0" y="1168" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#1F5661">auth_connected</text>
+<rect x="949.4" y="1153" width="146.0" height="21" rx="4" fill="#F4DFC1"/>
+<text x="958.4" y="1168" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#7A4403">computer_pagerank</text>
+<rect x="118.0" y="1238" width="1342.0" height="115" rx="6" fill="#D87908"/>
+<rect x="123.0" y="1238" width="1337.0" height="115" rx="6" fill="#FFFFFF"/>
+<rect x="123.0" y="1238" width="10" height="115" fill="#FFFFFF"/>
+<rect x="118.0" y="1238" width="1342.0" height="115" rx="6" fill="none" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="140.0" y="1271" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" fill="#171513">Clean Up</text>
+<text x="140.0" y="1299" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#4D4541">Keep computer_pagerank for the later scenarios. The DROP TABLE statement is commented out.</text>
+<rect x="140.0" y="1311" width="326.8" height="21" rx="4" fill="#F4DFC1"/>
+<text x="149.0" y="1326" font-family="'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" fill="#7A4403">-- DROP TABLE IF EXISTS computer_pagerank</text>
+<rect x="40" y="1379" width="1420" height="52" rx="6" fill="#FFFFFF" stroke="#D9D2C8" stroke-width="1.2"/>
+<text x="64" y="1411" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#171513">Legend</text>
+<rect x="150" y="1396" width="26" height="18" rx="4" fill="#F8E2DD" stroke="#C94735" stroke-width="1.5"/>
+<text x="184" y="1411" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="14" fill="#4D4541">Ground-truth graph</text>
+<rect x="348.9375" y="1396" width="26" height="18" rx="4" fill="#DCEFF4" stroke="#2F6871" stroke-width="1.5"/>
+<text x="382.9375" y="1411" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="14" fill="#4D4541">Cyber graph pattern</text>
+<rect x="552.71875" y="1396" width="26" height="18" rx="4" fill="#DFEBD8" stroke="#5F8B4C" stroke-width="1.5"/>
+<text x="586.71875" y="1411" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="14" fill="#4D4541">Graph algorithm</text>
+<rect x="729.328125" y="1396" width="26" height="18" rx="4" fill="#F4DFC1" stroke="#D87908" stroke-width="1.5"/>
+<text x="763.328125" y="1411" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="14" fill="#4D4541">Stored result table</text>
+<rect x="920.4375" y="1396" width="26" height="18" rx="4" fill="#EEEAE5" stroke="#6F6862" stroke-width="1.5"/>
+<text x="954.4375" y="1411" font-family="'Oracle Sans', 'Oracle Sans UI', Inter, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="14" fill="#4D4541">SQL / relational table</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTowNDQ0NzIzNy04MjNiLTRhODYtOWJiNy1hZjIxODZlM2E4MGQAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaPG11j9wUjqnmMwABPm9Hn4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpiMWZlMmVjMy1mOWM2LTQyMGEtYTljZi1hZDk4NWJhZWNlMmNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNodh7GoNKq8baezUUxDUWfswAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggjDI1UPYSALX3ctWJMJqu7MNp6lpmkH+xG5B3CC1qk66kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaOnzJf684TiY9+guOgBIGkkAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIGdrbg0Bqb4wKFjEj/3WusurrQdXA+BnO0fFaU/hcStLZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GUiMZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjA0NDQ3MjM3LTgyM2ItNGE4Ni05YmI3LWFmMjE4NmUzYTgwZC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjYzNTBmODY3LTA5MzUtNDhiYS05MTdiLTUzYjYyOTM4MGU4N3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCMMjVQ9hIAtfdy1Ykwmq7sw2nqWmaQf7EbkHcILWqTrqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg6oVdA/CyOm6yWTtzMtm13Qt5OuH0bkKcQfro9UmNgWSiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggQucnXn48377NERH4+GvgPbnWiTI4EcAXTcOParh7t4d0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQLsTocdt66+7lyJZtrgxXRTcY4ppl3MM69WK6wgpQfLZv0xiZ20ahfR/drFpIcAuR5+Fx0JaD1bkBDnTAjsDiC0=</c2pa:manifest></metadata></svg>
